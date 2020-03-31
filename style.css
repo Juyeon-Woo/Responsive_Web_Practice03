@@ -1,85 +1,67 @@
-nav ul li{
-    float: left;
-    margin: 5px 15px;
-    padding: 10px;
-    font-size: 0.8rem;
-  }
-  #contaioner, nav{
-    width: 310px;
-    margin: 0 auto;
-  }
-  #intro{
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  intro img{
+#container{
+    display: flex;
+    flex-direction: column;
+}
+#container div{
     max-width: 100%;
-  }
-  #desc{
-    width:100%;
-    padding: 10px;
-  }
-  footer{
-    width: 100px;
-    height: 60px;
-    padding: 20px;
-    background: #37001c;
-    color:#ffff;
-  }
-  footer p{
+    border: 1px solid black;
+    background: #ccc;
+}
+
+#title{
     text-align: center;
-  }
-  
-  @media all and (min-width:768px){
-    #container, nav{
-      width: 750px;
-      margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+
+footer p{
+    font-size: 1.2em;
+    color:#eee;
+    text-align: center;
+    line-height: 200px;
+}
+
+@media all and (min-width: 768px){
+    #container div{
+        margin: 0;
     }
-    #intro{
-      width:100%;
+    #menus{
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
-    #intro img{
-      width: 200px;
-      margin:20px;
+    #menu1, #menu2, #menu3, #menu4{
+        width: 49%;
     }
-    #desc{
-      width: 100%;
-      padding: 0px;
-      margin: 10px auto;
-    }
-    footer{
-      height: 150px;
-      background-color: blanchedalmond;
-      background-size:cover;
-    }
-    footer p{
-      line-height: 150px;
-    }
-  }
-  @media (min-width:1024px){
-    header {
-      display: inline-block;
-    }
-    #container, nav{
-      width: 1000px;
-      margin: 0 auto;
-    }
-    #intro img{
-      float: left;
-    }
-    #desc{
-      display: inline-block;
-      width: 250px;
-      height: 200px;
-      padding: 5px;
-      border: 1px dotted #ccc;
+    #menu5{
+        width:100%;
     }
     footer{
-      clear: both;
-      height: 200px;
-      background-size: cover;
+        width:100%;
     }
-    footer p{
-      line-height: 200px;
+}
+@media all and (min-width: 992px){
+    #title{
+        width:100%;
     }
-  }
+    #menus{
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #menu1, #menu2, #menu3, #menu4, #menu5{
+        width: 33%;
+    }
+    #menu5{
+        margin-left: 0.5%;
+        flex:2 2 0;
+    }
+    footer{
+        width:100%;
+    }
+}
